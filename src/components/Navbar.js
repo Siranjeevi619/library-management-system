@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -7,9 +8,9 @@ function Navbar() {
       data-bs-theme="dark"
     >
       <div className="container">
-        <a className="navbar-brand text-white h4" href="/">
+        <NavLink className="navbar-brand text-white h4" to="/">
           earnKnowledge
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,28 +25,52 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarToggle">
           <ul className="navbar-nav ms-5 mb-2 mb-lg-0">
             <li className="nav-item">
-              <a
-                className="nav-link active text-white"
-                aria-current="page"
-                href="/"
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link active text-white"
+                    : "nav-link text-white"
+                }
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="/">
+              <NavLink
+                to="/Books"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link active text-white"
+                    : "nav-link text-white"
+                }
+              >
                 Book
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="/">
+              <NavLink
+                to="/Orders"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link active text-white"
+                    : "nav-link text-white"
+                }
+              >
                 Orders
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="/">
+              <NavLink
+                to="/NewGenres"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link active text-white"
+                    : "nav-link text-white"
+                }
+              >
                 New Genre
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
