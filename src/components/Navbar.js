@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav
-      className="navbar navbar-expand-lg bg-dark text-primary"
+      className="navbar navbar-expand-lg bg-black text-primary"
       data-bs-theme="dark"
     >
-      <div className="container">
+      <div className="container my-1">
         <NavLink className="navbar-brand text-white h4" to="/">
-          earnKnowledge
+          EarnKnowledge
         </NavLink>
         <button
           className="navbar-toggler"
@@ -29,7 +29,7 @@ function Navbar() {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "nav-link active text-white"
+                    ? "nav-link active text-primary"
                     : "nav-link text-white"
                 }
               >
@@ -41,7 +41,7 @@ function Navbar() {
                 to="/Books"
                 className={({ isActive }) =>
                   isActive
-                    ? "nav-link active text-white"
+                    ? "nav-link active text-primary"
                     : "nav-link text-white"
                 }
               >
@@ -53,7 +53,7 @@ function Navbar() {
                 to="/Orders"
                 className={({ isActive }) =>
                   isActive
-                    ? "nav-link active text-white"
+                    ? "nav-link active text-primary"
                     : "nav-link text-white"
                 }
               >
@@ -65,12 +65,42 @@ function Navbar() {
                 to="/NewGenres"
                 className={({ isActive }) =>
                   isActive
-                    ? "nav-link active text-white"
+                    ? "nav-link active text-primary"
                     : "nav-link text-white"
                 }
               >
                 New Genre
               </NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="dropdown-center me-5">
+          <button
+            className="btn btn-outline-light rounded-circle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style={{
+              width: "40px",
+              height: "40px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <i className="bi bi-person-circle"></i>
+          </button>
+          <ul className="dropdown-menu dropdown-menu-end mt-3 dropdown-menu-lg-start">
+            <li>
+              <NavLink to="/DashBoard" className="dropdown-item" href="/">
+                DashBoard
+              </NavLink>
+            </li>
+
+            <li>
+              <a className="dropdown-item" href="#">
+                Sign Out
+              </a>
             </li>
           </ul>
         </div>
