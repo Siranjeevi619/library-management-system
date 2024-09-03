@@ -2,12 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  // Function to handle the collapse of the Navbar
-  const handleNavLinkClick = () => {
-    const navbarToggle = document.getElementById("navbarToggle");
-    const navbarCollapse = new window.bootstrap.Collapse(navbarToggle);
-    navbarCollapse.hide();
-  };
+  const handleNavLinkClick = () => {};
 
   return (
     <nav
@@ -15,26 +10,17 @@ function Navbar() {
       data-bs-theme="dark"
     >
       <div className="container-fluid">
-        <NavLink
-          className="navbar-brand mx-auto text-center mx-md-0 text-white h4"
-          to="/"
-        >
-          EarnKnowledge
+        <NavLink className="navbar-brand text-white h4" to="/">
+          LearnKnowledge
         </NavLink>
         <button
-          className="navbar-toggler p-1 ms-auto"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarToggle"
           aria-controls="navbarToggle"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          style={{
-            width: "30px",
-            height: "30px",
-            outline: "none",
-            boxShadow: "none",
-          }}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -48,7 +34,6 @@ function Navbar() {
                     ? "nav-link active text-primary"
                     : "nav-link text-white"
                 }
-                onClick={handleNavLinkClick}
               >
                 Home
               </NavLink>
@@ -61,7 +46,6 @@ function Navbar() {
                     ? "nav-link active text-primary"
                     : "nav-link text-white"
                 }
-                onClick={handleNavLinkClick}
               >
                 Book
               </NavLink>
@@ -74,7 +58,6 @@ function Navbar() {
                     ? "nav-link active text-primary"
                     : "nav-link text-white"
                 }
-                onClick={handleNavLinkClick}
               >
                 Orders
               </NavLink>
@@ -87,33 +70,37 @@ function Navbar() {
                     ? "nav-link active text-primary"
                     : "nav-link text-white"
                 }
-                onClick={handleNavLinkClick}
               >
                 New Genre
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                to="/PublishBook"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link active text-primary"
+                    : "nav-link text-white"
+                }
+              >
+                Publish{" "}
+              </NavLink>
+            </li>
           </ul>
-          <div className="d-flex align-items-center justify-content-center ms-lg-4 mt-3 mt-lg-0">
-            <div className="dropdown-center">
+          <div className="d-flex ms-lg-4">
+            <div className="dropdown">
               <button
                 className="btn btn-outline-light rounded-circle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
               >
                 <i className="bi bi-person-circle"></i>
               </button>
-              <ul className="dropdown-menu dropdown-menu-end mt-2">
+              <ul className="dropdown-menu dropdown-menu-end">
                 <li>
                   <NavLink
-                    to="/DashBoard"
+                    to="/DashBoard/Profile"
                     className="dropdown-item"
                     onClick={handleNavLinkClick}
                   >

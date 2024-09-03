@@ -22,17 +22,12 @@ function BookPage() {
       {/* Display section */}
       <div className="container">
         <div className="row">
-          <div className="d-flex flex-wrap justify-content-center">
-            <BooksCard />
-            <BooksCard />
-            <BooksCard />
-            <BooksCard />
-            <BooksCard />
-            <BooksCard />
-            <BooksCard />
-            <BooksCard />
-            <BooksCard />
-          </div>
+          <BooksCard />
+          <BooksCard />
+          <BooksCard />
+          <BooksCard />
+          <BooksCard />
+          <BooksCard />
         </div>
       </div>
     </>

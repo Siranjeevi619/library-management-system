@@ -12,6 +12,7 @@ import PublishPage from "../components/PublishPage";
 import Orders from "../components/Orders";
 import PremiumPage from "../components/PremiumPage";
 import Settings from "../components/Settings";
+import BookPublish from "../pages/BookPublish/BookPublish";
 
 function AppNavigation() {
   return (
@@ -31,6 +32,7 @@ function AppNavigation() {
           <Route path="Premium" element={<PremiumPage />}></Route>
           <Route path="Settings" element={<Settings />}></Route>
         </Route>
+        <Route path="/PublishBook" element={<BookPublish />}></Route>
       </Routes>
     </div>
   );

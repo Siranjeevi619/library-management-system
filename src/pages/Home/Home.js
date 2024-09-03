@@ -13,7 +13,7 @@ function Home() {
 
       {/* promote area */}
       <div className="container">
-        <div className="row">
+        <div className="row ">
           <BooksCard />
           <BooksCard />
           <BooksCard />
