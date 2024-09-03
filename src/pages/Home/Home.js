@@ -14,18 +14,10 @@ function Home() {
       {/* promote area */}
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-3">
-            <BooksCard />
-          </div>
-          <div className="col-12 col-md-3">
-            <BooksCard />
-          </div>
-          <div className="col-12 col-md-3">
-            <BooksCard />
-          </div>
-          <div className="col-12 col-md-3">
-            <BooksCard />
-          </div>
+          <BooksCard />
+          <BooksCard />
+          <BooksCard />
+          <BooksCard />
         </div>
       </div>
     </div>

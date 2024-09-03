@@ -1,25 +1,24 @@
 import React from "react";
 import BookImage from "../assets/BookPoster/component1.jpg";
 import "../assets/styles/BooksCard.css";
+
 function BooksCard() {
   return (
-    <>
-      <div className="col-12 col-md-4 col-lg-3 my-3">
-        <div className="card" style={{ width: "18rem" }}>
-          <div className="align-items-center mx-auto">
-            <img src={BookImage} className="p-4  book-card-img" />
-          </div>
-          <div className="ms-4 my-1">
-            <div className="card-title h4">A Delimit</div>
-            <div className="card-subtitle text-muted h5">Steve</div>
-            <div className="card-subtitle text-muted h6 my-1">1999</div>
-            <button className="btn btn-primary my-2">
-              Buy Now <i class="bi bi-bag-check"></i>
-            </button>
-          </div>
+    <div className="col-12 col-md-6 col-lg-4 col-xl-3 my-3">
+      <div className="card" style={{ width: "18rem" }}>
+        <div className="d-flex justify-content-center">
+          <img src={BookImage} className="p-2 book-card-img" alt="Book" />
+        </div>
+        <div className="card-body text-center text-md-start">
+          <h5 className="card-title">A Delimit</h5>
+          <h6 className="card-subtitle text-muted">Steve</h6>
+          <p className="card-subtitle text-muted my-1">1999</p>
+          <button className="btn btn-primary my-2">
+            Buy Now <i className="bi bi-bag-check"></i>
+          </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

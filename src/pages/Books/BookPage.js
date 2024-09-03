@@ -5,30 +5,34 @@ import BooksCard from "../../components/BooksCard";
 function BookPage() {
   return (
     <>
-      {/* search section */}
+      {/* Search section */}
       <div className="container">
         <div className="row">
-          <div className="col-6 my-4">
-            <h4 className="fw-light">Search Something Learn Anything</h4>
+          <div className="col-md-6 col-lg-4 col-12 mt-2 my-md-3">
+            <h4 className="fw-light text-center">
+              Search Something Learn Anything
+            </h4>
           </div>
-          <div className="col-6 my-3">
+          <div className="col-md-6  col-lg-6 col-12 my-1 my-md-3">
             <SearchBar />
           </div>
         </div>
       </div>
 
-      {/* display section */}
+      {/* Display section */}
       <div className="container">
         <div className="row">
-          <BooksCard />
-          <BooksCard />
-          <BooksCard />
-          <BooksCard />
-          <BooksCard />
-          <BooksCard />
-          <BooksCard />
-          <BooksCard />
-          <BooksCard />
+          <div className="d-flex flex-wrap justify-content-center">
+            <BooksCard />
+            <BooksCard />
+            <BooksCard />
+            <BooksCard />
+            <BooksCard />
+            <BooksCard />
+            <BooksCard />
+            <BooksCard />
+            <BooksCard />
+          </div>
         </div>
       </div>
     </>
