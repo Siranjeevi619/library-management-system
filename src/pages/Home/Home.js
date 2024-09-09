@@ -5,9 +5,13 @@ function Home() {
   return (
     <div className="container">
       <div className="row my-3">
-        <div className="col-12 text-center">
-          <div className="display-1 text-primary">Hello Learners</div>
-          <p className="lead">Know KnowLedge Gain Knowledge Earn Knowledge</p>
+        <div className="col-12 ">
+          <div className=" ">
+            <p className="display-2 text-center text-primary">Hello Learners</p>
+            <p className="lead text-center">
+              Know KnowLedge Gain Knowledge Earn Knowledge
+            </p>
+          </div>
         </div>
       </div>
 

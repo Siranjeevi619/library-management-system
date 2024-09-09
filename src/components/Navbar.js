@@ -2,17 +2,22 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const handleNavLinkClick = () => {};
+  const handleNavLinkClick = () => {
+    // Add functionality here if needed in the future
+  };
 
   return (
     <nav
-      className="navbar navbar-expand-lg bg-black text-primary"
+      className="navbar navbar-expand-lg  bg-black text-primary sticky-top"
       data-bs-theme="dark"
     >
       <div className="container-fluid">
+        {/* Brand */}
         <NavLink className="navbar-brand text-white h4" to="/">
           LearnKnowledge
         </NavLink>
+
+        {/* Toggler for mobile screens */}
         <button
           className="navbar-toggler"
           type="button"
@@ -24,15 +29,16 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
+        {/* Navbar content */}
         <div className="collapse navbar-collapse" id="navbarToggle">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+            {/* NavLink items */}
             <li className="nav-item">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive
-                    ? "nav-link active text-primary"
-                    : "nav-link text-white"
+                  `nav-link ${isActive ? "active text-primary" : "text-white"}`
                 }
               >
                 Home
@@ -42,21 +48,17 @@ function Navbar() {
               <NavLink
                 to="/Books"
                 className={({ isActive }) =>
-                  isActive
-                    ? "nav-link active text-primary"
-                    : "nav-link text-white"
+                  `nav-link ${isActive ? "active text-primary" : "text-white"}`
                 }
               >
-                Book
+                Books
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink
                 to="/Orders"
                 className={({ isActive }) =>
-                  isActive
-                    ? "nav-link active text-primary"
-                    : "nav-link text-white"
+                  `nav-link ${isActive ? "active text-primary" : "text-white"}`
                 }
               >
                 Orders
@@ -66,9 +68,7 @@ function Navbar() {
               <NavLink
                 to="/NewGenres"
                 className={({ isActive }) =>
-                  isActive
-                    ? "nav-link active text-primary"
-                    : "nav-link text-white"
+                  `nav-link ${isActive ? "active text-primary" : "text-white"}`
                 }
               >
                 New Genre
@@ -78,15 +78,15 @@ function Navbar() {
               <NavLink
                 to="/PublishBook"
                 className={({ isActive }) =>
-                  isActive
-                    ? "nav-link active text-primary"
-                    : "nav-link text-white"
+                  `nav-link ${isActive ? "active text-primary" : "text-white"}`
                 }
               >
-                Publish{" "}
+                Publish
               </NavLink>
             </li>
           </ul>
+
+          {/* Profile and Dropdown menu */}
           <div className="d-flex ms-lg-4">
             <div className="dropdown">
               <button

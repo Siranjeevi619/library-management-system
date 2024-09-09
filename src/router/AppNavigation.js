@@ -19,7 +19,6 @@ function AppNavigation() {
     <div>
       <Navbar />
       <Routes>
-        {" "}
         <Route path="/" element={<Home />} />
         <Route path="/Books" element={<BookPage />} />
         <Route path="/Orders" element={<OrderPage />} />

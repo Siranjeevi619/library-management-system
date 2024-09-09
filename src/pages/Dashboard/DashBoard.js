@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 function DashBoard() {
   return (
-    <div className="container-fluid p-0">
+    <div className="container-fluid p-0 ">
       {/* Navbar for Mobile Screens */}
       <nav className="navbar navbar-dark bg-black d-md-none">
         <div className="container-fluid d-flex justify-content-around p-0">
@@ -30,7 +30,9 @@ function DashBoard() {
 
       <div className="row gx-0">
         {/* Sidebar for Larger Screens */}
-        <div className="col-12 col-md-3 col-lg-2 d-none d-md-block bg-black vh-100 p-3 text-white">
+        <div
+          className="col-12 col-md-3 col-lg-2 d-none d-md-block bg-black text-white p-3 vh-100 position-fixed"
+        >
           <ul className="nav nav-pills flex-column mb-auto">
             <li>
               <NavLink to="/DashBoard/Profile" className="nav-link text-white">
@@ -72,8 +74,8 @@ function DashBoard() {
         </div>
 
         {/* Outlet Content */}
-        <div className="col-12 col-md-9 col-lg-10 p-md-4 py-3">
-          <Outlet />
+        <div className="col-12 col-md-9 col-lg-10 offset-md-3 offset-lg-2 p-md-4 py-3">
+          <Outlet className="" />
         </div>
       </div>
     </div>

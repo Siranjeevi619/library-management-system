@@ -1,0 +1,9 @@
+* {
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .fixed-bottom-md {
+    position: static; 
+  }
+}
