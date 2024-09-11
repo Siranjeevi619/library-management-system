@@ -38,11 +38,11 @@ const BookSchema = new Schema({
     required: true,
   },
   bookThumbnail: {
-    type: Buffer,
+    type: String,
     required: true,
   },
   bookMaterial: {
-    type: Buffer,
+    type: String,
     required: true,
   },
 });

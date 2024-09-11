@@ -7,12 +7,12 @@ export const bookPublish = async (request, response) => {
       bookDescription: request.body.bookDescription,
       bookMaterial: request.body.bookMaterial,
       authorName: request.body.authorName,
-      Genre: request.body.Genre,
+      genre: request.body.genre,
       ISBN_CODE: request.body.ISBN_CODE,
       publisher: request.body.publisher,
       dateOfPublish: request.body.dateOfPublish,
       language: request.body.language,
-
+      price:request.body.price,
       bookThumbnail: request.body.bookThumbnail,
     });
     const book = await newBook.save();
@@ -23,11 +23,12 @@ export const bookPublish = async (request, response) => {
   }
 };
 
-export const fetchBookAll = async (request, response) => {
+export const bookAll = async (request, response) => {
   try {
     console.log("fetch all book");
     const fetchAllBook = await Book.find();
-    return response.json({ fetchAllBook });
+
+    return response.status(200).json({ fetchAllBook });
   } catch (e) {
     console.log(e.message);
   }
