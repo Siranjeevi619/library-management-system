@@ -5,6 +5,9 @@ import {
   bookAll,
   bookDeleteOne,
   bookUpdateOne,
+  findBookByTitle,
+  findBookByAuthor,
+  bookByAuthorCount,
 } from "../controllers/books.controllers.js";
 
 //book publish
@@ -20,4 +23,12 @@ router.delete("/:bookTitle", bookDeleteOne);
 //update one book
 router.put("/:bookId", bookUpdateOne);
 
+//find book by booktitle
+router.get("/:bookTitle", findBookByTitle);
+
+//find book by authorName
+router.get("/author/:authorName", findBookByAuthor);
+
+//no of book done by author
+router.post("/books-count", bookByAuthorCount);
 export default router;
